@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title MerukariProto
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    link rel="stylesheet" href="asssts/stylesheets/bootstrap.min.css"
+  body
+
+    = yield
+    scripe src="asssts/javascripts/bootstrap.min.js"
