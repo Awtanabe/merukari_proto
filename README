@@ -1,0 +1,189 @@
+# README
+
+#DB設計
+
+
+このアプリケーションは？
+
+
+ユーザー　　商品　　　届ける　決済する
+
+## 大枠
+
+ユーザー　→　商品をだす　　→　購入する　　→　　届ける
+　　　　　　　　　　　　　　　（決済）　　　　（場所）
+
+
+## ユーザー
+
+ユーザー
+　提供者側
+　購入側
+
+
+
+
+
+商品
+
+カテゴリー
+
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|email|string|null: false, foreign_key: true|
+|pasword|integer|null: false, foreign_key: true|
+|password_comfirmation|integer|null: false, foreign_key: true|
+
+
+### Association
+- has_many :message
+- has_many :members
+
+
+## productsテーブル
+
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|price|integer|
+|status|string| enumにする
+|detail|text|
+|user|references|
+|category|references|
+|shipment|references|
+
+
+### Association
+- belongs_to :user
+- belongs_to :category
+- belongs_to :shipment
+
+
+## categoryテーブル
+
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|product|references|
+
+### Association
+- belongs_to :product
+
+## shipmentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|delivery_fee|integer|
+|status|string| enumにする
+|destination|string|
+|user|references|
+|product|references|
+
+
+### Association
+- belongs_to :user
+- belongs_to :category
+
+## settlement
+
+|Column|Type|Options|
+|------|----|-------|
+|earnings|integer|
+|display_products|string|
+|buy_products|string|
+|user|references|
+|product|references|
+
+
+### Association
+- belongs_to :user
+- belongs_to :product
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+============================
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|email|string|null: false, foreign_key: true|
+|pasword|integer|null: false, foreign_key: true|
+|password_comfirmation|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :message
+- has_many :members
+
+
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :menbers
+
+
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false, foreign_key: true|
+|image|string|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
