@@ -65,6 +65,17 @@
 - belongs_to :shipment
 
 
+## categoryテーブル
+
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|product|references|
+
+### Association
+- belongs_to :product
+
 ## shipmentsテーブル
 
 |Column|Type|Options|
