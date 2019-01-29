@@ -1,3 +1,31 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pickup-head{
+  text-align: center;
+}
+
+.items-box-container{
+  text-align: center;
+  color:skyblue;
+  &:hover{
+    opacity:0.8;
+  }
+}
+
+.fa-search{
+  font-size: 20px;
+  background-color:red;
+  height:100px;
+  width:100px;
+}
+// .sell-icon{
+//   width:100px;
+//   height:100px;
+//   background-color:#ea352d;
+// }
+
+.items-box{
+  display: inline-block;
+}

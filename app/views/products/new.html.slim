@@ -1,17 +1,17 @@
-.header
-  .container.clearfix
-    .side
-      .logo
-        h1 merukari_proto
-      .menu
-        ul
-          li category
-    .right
-      ul
-      - if user_signed_in?
-        li = link_to 'ログアウト', destroy_user_session_path
-        li = link_to 'マイページ'
-      - else
-        li = link_to 'ログイン', new_user_session_path
-
-h1 new
+/ .header
+/   .container.clearfix
+/     .side
+/       .logo
+/         h1 merukari_proto
+/       .menu
+/         ul
+/           li category
+/     .right
+/       ul
+/       - if user_signed_in?
+/         li = link_to 'ログアウト', destroy_user_session_path
+/         li = link_to 'マイページ'
+/       - else
+/         li = link_to 'ログイン', new_user_session_path
+/
+/ h1 new

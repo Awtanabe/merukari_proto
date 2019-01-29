@@ -3,6 +3,16 @@
   .container
     = form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
       = devise_error_messages!
+
+      .field
+        = f.label :name
+        br
+        = f.text_field :name
+      .field
+        = f.label :avatar
+        br
+        = f.file_field :avatar
+
       .field
         = f.label :email
         br

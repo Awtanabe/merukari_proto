@@ -1,0 +1,22 @@
+.main
+  .top-banner
+    ul
+      .top-banner_item
+        li
+          a = image_tag "top-banner", width: "100%"
+      / .top-banner_item
+      /   li
+      /     a = image_tag "top-banner2", width: "100%"
+  .aa
+  .pickup-container
+    h2.pickup-head ピックアップカテゴリー
+  = render 'shared/products/items'
+  = render 'shared/products/items'
+  = render 'shared/products/items'
+  .pickup-container
+    h2.pickup-head ブランドカテゴリー
+  = render 'shared/products/items'
+  = render 'shared/products/items'
+  = render 'shared/products/items'
+  a.sell-icon
+    i.fa.fa-search.fa-3x

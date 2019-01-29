@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipped_on: 2018-12-24
+  delivered_on: 2018-12-24
+  order_id: 
+
+two:
+  shipped_on: 2018-12-24
+  delivered_on: 2018-12-24
+  order_id: 

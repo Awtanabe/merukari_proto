@@ -1,10 +1,15 @@
 class ProductsController < ApplicationController
  def index
-  render text:"yahoo"
+
  end
 
  def new
   @product = Product.new(product_params)
+ end
+
+ def search
+
+
  end
 
 
