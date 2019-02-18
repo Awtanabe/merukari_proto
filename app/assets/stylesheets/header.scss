@@ -1,21 +1,28 @@
-// .clearfix::after{
-//   content: "";
-//   display: block;
-//   clear: both;
-// }
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .container{
-  width: 1009px;
+  width: 100%;
   margin: 0 auto;
   .header{
-    .wrapper{
-
+    width: 700px;
+    margin: 0 auto;
+    .upper{
+      margin-top: 13px;
+      .l-left{
+        float:left;
+       }
+       .search{
+         float:right;
+         .search-form{
+           width: 469px;
+         }
+       }
     }
   }
-
-}
-ul{
-
 }
 
 .category{
@@ -58,6 +65,9 @@ ul{
 
 .fa-search{
   margin-left: -23px;
+  position:100px;
+  right:30px;
+  border-radius:50%;
 }
 
 .footer{
@@ -91,15 +101,15 @@ ul{
   }
 }
 
-.my-account{
-  .header{
-    height:100px;
-    width:300px;
-    background:green;
-  }
-  .body{
-    height:500px;
-    width:300px;
-    background-color: yellow;
-  }
-}
+// .my-account{
+//   .header{
+//     height:100px;
+//     width:300px;
+//     background:green;
+//   }
+//   .body{
+//     height:500px;
+//     width:300px;
+//     background-color: yellow;
+//   }
+// }
