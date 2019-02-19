@@ -14,17 +14,30 @@
   }
 }
 
-.fa-search{
+.fa-bell{
+  color:black;
+}
+.fa-camera{
   font-size: 20px;
-  background-color:red;
+  color: white;
   height:100px;
   width:100px;
 }
-// .sell-icon{
-//   width:100px;
-//   height:100px;
-//   background-color:#ea352d;
-// }
+.sell-icon{
+  color: white;
+  text-align: center;
+  line-height: 2 !important;
+  border-radius: 50%;
+  position: fixed;
+  right:30px;
+  bottom:70px;
+}
+
+.sell-icon{
+  width: 131px;
+  height: 122px;
+  background-color:#ea352d;
+}
 
 .items-box{
   display: inline-block;

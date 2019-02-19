@@ -17,18 +17,25 @@
               = link_to 'ブランドから探す', "#"
         .right
           .account.clearfix
-            ul
-            - if user_signed_in?
-              ul
-                li.myPage.clearfix
-                  .avatar
-                   = image_tag current_user.avatar.url, :class	 => "avatar"
-                  #avatar-text マイページ
-                li.info = link_to 'お知らせ'
-                li.todoList = link_to 'やることリスト'
-                / li.signOut = link_to 'ログアウト', destroy_user_session_path, method: :delete
-                / li.signIn = link_to 'マイページ'
+            uls
+            / user_signed_in?
+            - if true
+              li.myPage.clearfix
+                .avatar
+                  / = image_tag current_user.avatar.url, :class	 => "avatar"
+                #avatar-text マイページ
+              li.info 
+                = link_to '#' do
+                  i.fas.fa-bell
+                    span お知らせ
+              li.todoList 
+                = link_to '#'  do
+                  i.fas.fa-check
+                    span やることリスト
+              / li.signOut = link_to 'ログアウト', destroy_user_session_path, method: :delete
+              / li.signIn = link_to 'マイページ'
 
             - else
               / li = link_to 'ログイン', user_session_path
               / li = link_to '会員登録', new_user_registration_path
+        = render 'shared/headers/category'

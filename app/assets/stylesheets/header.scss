@@ -17,6 +17,7 @@
        }
        .search{
          float:right;
+         width: calc(100% - 153px);
          .search-form{
            width: 469px;
          }
@@ -65,12 +66,11 @@
 
 .fa-search{
   margin-left: -23px;
-  position:100px;
-  right:30px;
-  border-radius:50%;
 }
 
 .footer{
+  padding-top: 10px;
+  margin-bottom: -21px;
   .left{
     .category{
       display: inline-block;
